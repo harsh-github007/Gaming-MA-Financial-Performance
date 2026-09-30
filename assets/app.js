@@ -4,7 +4,7 @@ const $ = id => document.getElementById(id);
 const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
 const hasCharts = () => typeof Chart !== 'undefined';
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-const COLORS = { TTWO: '--blue', EA: '--aqua', U: '--orange', NAZARA: '#8a5cd0' };
+const COLORS = { TTWO: '--blue', EA: '--aqua', U: '--orange', NAZARA: '#c77dff' };
 const color = t => COLORS[t].startsWith('--') ? css(COLORS[t]) : COLORS[t];
 const TARGET = { TTWO: 'Zynga', EA: 'Codemasters, Glu, Playdemic', U: 'ironSource', NAZARA: 'Sportskeeda, Kiddopia' };
 const SHORT = { TTWO: 'Take-Two', EA: 'Electronic Arts', U: 'Unity', NAZARA: 'Nazara' };

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gaming M&amp;A Performance</title>
+  <meta name="description" content="Did acquisitions pay off for video-game companies? Take-Two–Zynga, EA's 2021 deals, Unity–ironSource and Nazara, before and after, from reported financials.">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%232a78d6'/><path d='M9 13h14a4 4 0 0 1 4 4v1a4 4 0 0 1-7 2.6L19 20h-6l-1 .6A4 4 0 0 1 5 18v-1a4 4 0 0 1 4-4z' fill='white'/></svg>">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <h1>Did the Deals Pay Off?</h1>
+      <p class="lede">How four video-game companies performed in the three years before and after a major acquisition, from their own reported financials: Take-Two and Zynga, Electronic Arts' 2021 buying spree, Unity and ironSource, and India's Nazara Technologies.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <p class="result" id="loadError" hidden></p>
+
+    <section class="panel" aria-labelledby="dealsHead">
+      <h2 id="dealsHead">The deals</h2>
+      <div class="deals" id="deals"></div>
+    </section>
+
+    <section class="panel" aria-labelledby="chartHead">
+      <h2 id="chartHead">Before and after</h2>
+      <div class="chips" role="group" aria-label="Acquirer" id="dealChips"></div>
+      <div class="inputs">
+        <label>Measure<select id="metric"></select></label>
+      </div>
+      <div class="chart"><canvas id="lineChart" aria-label="Chosen measure by fiscal year"></canvas></div>
+      <p class="muted small">The grey band is the fiscal year the deal completed. That year is left out of the before-and-after averages, because it mixes both.</p>
+      <p class="muted small" id="ppYears"></p>
+      <div class="scroll"><table class="tbl" id="ppTable"></table></div>
+      <p class="result" id="ppNote"></p>
+    </section>
+
+    <section class="panel" aria-labelledby="sumHead">
+      <h2 id="sumHead">All four at a glance</h2>
+      <p class="muted small">Change from the three years before to the three years after each deal, in percentage points.</p>
+      <div class="scroll"><table class="tbl" id="sumTable"></table></div>
+      <p class="muted small">Four deals are case evidence, not a sample: no statistical test on four firms can show a significant average effect.</p>
+    </section>
+
+    <section class="panel" aria-labelledby="gwHead">
+      <h2 id="gwHead">What the deals left on the balance sheet</h2>
+      <p class="muted small">Goodwill is the part of a purchase price above the value of the assets bought. If the acquisition disappoints, it is written down. Take-Two wrote down $2.3 billion in FY2024 and $3.5 billion in FY2025, mostly tied to Zynga.</p>
+      <div class="chart"><canvas id="gwChart" aria-label="Goodwill as a share of total assets"></canvas></div>
+    </section>
+
+    <section class="panel small muted">
+      Sources: annual figures for Take-Two, Electronic Arts and Unity from their 10-K filings (SEC XBRL data); Nazara Technologies' consolidated figures from Screener.in; deal terms and share-price reactions from company announcements and press reports. Full list in the <a href="https://github.com/harsh-github007/Gaming-MA-Financial-Performance/blob/main/research/gaming-ma-financial-performance.pdf">research paper</a>. For information only, not investment advice.
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    <span>Data to fiscal 2026.</span>
+    <a href="https://github.com/harsh-github007/Gaming-MA-Financial-Performance">Source, data and research on GitHub</a>
+  </footer>
+
+  <script src="assets/vendor/chart.umd.js"></script>
+  <script type="module" src="assets/app.js"></script>
+</body>
+</html>

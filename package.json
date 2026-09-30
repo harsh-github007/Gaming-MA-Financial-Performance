@@ -1,0 +1,6 @@
+{
+  "name": "gaming-ma-financial-performance",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node --test tests/data.test.mjs" }
+}

@@ -15,8 +15,10 @@ export function parseCSV(text) {
 }
 export async function loadAll(base = '.') {
   const files = { deals: 'data/deals.csv', ratios: 'data/ratios.csv', prepost: 'data/pre_post.csv' };
-  const out = {};
-  for (const [k, f] of Object.entries(files)) { const r = await fetch(`${base}/${f}`); if (!r.ok) throw new Error(`Could not load ${f}`); out[k] = parseCSV(await r.text()); }
-  return out;
+  return Object.fromEntries(await Promise.all(Object.entries(files).map(async ([key, file]) => {
+    const response = await fetch(`${base}/${file}`);
+    if (!response.ok) throw new Error(`Could not load ${file}`);
+    return [key, parseCSV(await response.text())];
+  })));
 }
 export const span = s => { const [a, b] = String(s).split('-').map(Number); return [a, b]; };

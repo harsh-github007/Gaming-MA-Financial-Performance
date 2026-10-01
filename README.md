@@ -3,31 +3,33 @@
 Did acquisitions pay off for video-game companies? This project compares four acquirers' financial performance in the three fiscal years before and after a major deal, using their own reported financial statements.
 
 **Dashboard:** https://harsh-github007.github.io/Gaming-MA-Financial-Performance/
-**Research paper:** [A Case Study of the Impact of Mergers and Acquisitions on the Financial Performance of Companies in the Gaming Industry](research/gaming-ma-financial-performance.pdf), written in the Springer Nature journal article format ([LaTeX source](research/gaming-ma-financial-performance.tex))
+**Revised paper:** [Revised descriptive case-study manuscript](research/revised-paper.tex), with [review findings](research/review-findings.md) and [verified calculations](analysis/verified-calculations.json). The revision corrects timing and interpretation and adds sensitivity checks. The PDF below is the original manuscript and has not been regenerated.
+
+**Original research paper:** [A Case Study of the Impact of Mergers and Acquisitions on the Financial Performance of Companies in the Gaming Industry](research/gaming-ma-financial-performance.pdf), written in the Springer Nature journal article format ([LaTeX source](research/gaming-ma-financial-performance.tex))
 
 ## The deals
 
 | Acquirer | Target | Value | Completed |
 | --- | --- | ---: | --- |
 | Take-Two Interactive | Zynga | US$12.7 bn | May 2022 |
-| Electronic Arts | Codemasters, Glu Mobile, Playdemic | US$5.0 bn | Feb–Jun 2021 |
+| Electronic Arts | Codemasters, Glu Mobile, Playdemic | US$5.0 bn | Feb–Sep 2021 |
 | Unity Software | ironSource | US$4.4 bn | Nov 2022 |
 | Nazara Technologies (India) | Sportskeeda, Paper Boat Apps (Kiddopia) | INR 1.28 bn | 2019 |
 
 ## Key findings
 
-- **Every acquirer grew revenue:** 8.6% to 42.1% a year between the before and after windows.
+- **Every acquirer grew revenue:** 8.6% to 42.1% using the annualised ratio of window-average revenues; this is not organic growth or endpoint CAGR.
 - **Three of the four earned less on it:** Take-Two's operating margin fell from 15.3% to −48.9% (−13.3% before goodwill write-downs), EA's from 21.6% to 19.5% and Nazara's from 23.1% to 10.6%.
-- **Only Unity improved:** it was loss-making before and after, but ironSource turned its operating cash flow positive.
-- **Take-Two wrote down US$5.9 billion of goodwill** in FY2024 and FY2025, largely relating to Zynga.
+- **Only Unity improved:** it was loss-making before and after, and operating cash flow became positive after the merger. This comparison does not isolate the merger’s causal contribution.
+- **Take-Two wrote down US$5.9 billion of goodwill** in FY2024 and FY2025, recorded against one reporting unit; the cited disclosure does not uniquely allocate the charges to Zynga.
 - **Goodwill grew to 20–46% of assets** at the three US acquirers.
-- **The market saw it coming:** Take-Two's shares fell 13.1% on the day the Zynga deal was announced, and Unity's fell about 13% on its merger announcement, which also cut its revenue guidance.
+- **Announcement-day price changes:** Take-Two's shares fell 13.1% on the day the Zynga deal was announced, and Unity's fell about 13% on its merger announcement, which also cut its revenue guidance.
 
-With four cases the results are case evidence, not an estimate of the average effect of M&A.
+With four cases the results are descriptive associations, not estimates of causal acquisition effects. The original EA baseline includes some Codemasters operations. A wholly pre-programme FY2018–20 baseline increases its operating-margin decline from 2.1 to 5.2 percentage points. Nazara’s EBITDA-style margin differs from the US operating-margin definition.
 
 ## Method
 
-For each deal, year 0 is the acquirer's fiscal year in which the deal completed. Following Healy, Palepu and Ruback (1992), year 0 is left out, and the average of years −3 to −1 is compared with the average of years +1 to +3. The measures are:
+For each deal, year 0 is the acquirer's fiscal year in which the deal completed. The completion fiscal year is left out for Take-Two, Unity and Nazara. EA’s programme spans FY2021–22, so the original window is retained as a legacy comparison with a separate clean-baseline sensitivity. This does not replicate the Healy–Palepu–Ruback design. In the original calculations, and the average of years −3 to −1 is compared with the average of years +1 to +3. The measures are:
 
 - operating margin, including a version with goodwill impairments added back;
 - net margin;
@@ -45,6 +47,14 @@ For each deal, year 0 is the acquirer's fiscal year in which the deal completed.
 | `data/financials.csv` | Annual revenue, operating income, net income, assets, equity, current assets and liabilities, operating cash flow, goodwill and goodwill impairment | Take-Two, EA, Unity: 10-K filings via SEC XBRL data. Nazara: Screener.in consolidated statements |
 | `data/deals.csv` | Deal terms, dates and announcement-day share-price reactions | Company announcements and press reports, listed in the paper |
 | `data/ratios.csv`, `data/pre_post.csv` | Ratios by year, and the before and after averages | Generated by `analysis/analyze.py` |
+
+## Independent arithmetic verification
+
+```bash
+python3 analysis/reproduce-audit.py
+```
+
+This standard-library audit checks all 108 stored pre/post fields against the supplied CSV and writes `analysis/verified-calculations.json`. It does not certify every input against its original filing. EA FY2018 operating cash flow is missing, so no complete three-year cash-flow sensitivity is reported.
 
 ## Running it
 
@@ -68,3 +78,4 @@ tests/                  tests for the data files
 ```
 
 For information only, not investment advice.
+

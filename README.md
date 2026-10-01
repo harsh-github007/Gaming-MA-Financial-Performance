@@ -7,6 +7,11 @@ Did acquisitions pay off for video-game companies? This project compares four ac
 
 **Original research paper:** [A Case Study of the Impact of Mergers and Acquisitions on the Financial Performance of Companies in the Gaming Industry](research/gaming-ma-financial-performance.pdf), written in the Springer Nature journal article format ([LaTeX source](research/gaming-ma-financial-performance.tex))
 
+
+![Gaming acquisition research workspace](assets/screenshot.png)
+
+The interface uses warm paper surfaces, rust accents, and a dedicated chart workspace. Choose an acquirer and measure to compare before-and-after results, inspect annual data, or export CSV. Responsive layouts keep the research readable on phones while preserving the existing chart transitions and reduced-motion support.
+
 ## The deals
 
 | Acquirer | Target | Value | Completed |

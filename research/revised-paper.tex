@@ -1,0 +1,217 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.8in]{geometry}
+\usepackage[authoryear,round]{natbib}
+\usepackage{hyperref}
+\newcommand{\botrule}{\bottomrule}
+
+\usepackage{graphicx}
+\usepackage{manyfoot}
+\usepackage{textcomp}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{xurl}
+\graphicspath{{figures/}}
+\newcommand{\USD}{US\$}
+\newcommand{\INR}{INR~}
+
+\raggedbottom
+
+\begin{document}
+
+\title{Financial Performance Around Gaming-Industry Acquisitions: Four Descriptive Case Studies}
+
+\author{Harsh Raj\\Department of Finance and Risk Engineering\\New York University Tandon School of Engineering}
+\date{Revised draft, 1 October 2026}
+
+\maketitle
+\begin{abstract}
+This study describes financial performance around acquisition programmes at Take-Two Interactive, Electronic Arts (EA), Unity Software and Nazara Technologies. Three-year averages of annual accounting ratios are compared across designated pre- and post-acquisition windows. All four companies have higher average revenue in the later window. Operating margins decline at Take-Two and EA, while Unity's operating losses narrow; Nazara's separately defined margin before depreciation also declines. Take-Two's reported post-window operating margin is $-48.9\%$, compared with $-13.3\%$ when recorded goodwill impairments are added back. The original EA baseline contains part of the Codemasters acquisition period: replacing it with FY2018--20 changes the operating-margin decline from 2.1 to 5.2 percentage points. These associations do not identify acquisition effects, organic growth, realised synergies or shareholder value creation. Differences in accounting definitions, acquisition timing, asset remeasurement and other corporate activity limit comparisons. The results support distinguishing revenue expansion from profitability and cash generation, while motivating a controlled study with traceable primary-source data.
+\end{abstract}
+\noindent\textbf{Keywords:} Mergers and acquisitions; video games; operating performance; goodwill; descriptive case study.\\
+\textbf{JEL:} G34, L82, M41, L25.
+
+\section{Introduction}\label{sec:intro}
+
+Mergers and acquisitions (M\&A) are among the most important decisions a company makes. By buying another company, a firm can grow faster than it could by building, gain technology, talent and customers, and remove a competitor. Yet decades of research find that acquirers' shareholders gain little on average, and that many deals destroy value \citep{andrade2001,moeller2005}.
+
+The video-game industry offers a clear recent test. Between 2020 and 2023 the largest publishers made a series of large acquisitions, most of them to build a position in mobile games, a major strategic focus. Electronic Arts bought Codemasters, Glu Mobile and Playdemic between February and September 2021; Take-Two Interactive bought Zynga, the maker of FarmVille and Words With Friends, for \USD 12.7 billion in 2022; Unity Software, the game-engine maker, merged with the mobile advertising company ironSource; and in India, Nazara Technologies built itself through a sequence of acquisitions. Microsoft's \USD 69 billion purchase of Activision Blizzard, completed in October 2023, is the largest deal in the industry's history, but gaming is too small a part of Microsoft for its effect to be seen in company-level figures, so it is not studied here.
+
+This paper asks how the acquirers' reported financial performance changed around these acquisitions. The design measures associations rather than the causal effect of a deal. It compares each acquirer's profitability, returns, cash flow and liquidity in the three fiscal years before and after its deal, using figures from its own financial statements. It contributes evidence from an industry that has received little attention in the post-merger performance literature, and documents the size of the goodwill write-downs that followed the largest deal.
+
+\section{Literature review}\label{sec:lit}
+
+Two approaches dominate research on whether acquisitions create value. Event studies measure the share-price reaction when a deal is announced. They find that target shareholders gain substantially, while acquirers' returns are close to zero on average and negative for large deals: \citet{moeller2005} found that acquiring-firm shareholders lost about \USD 240 billion in the merger wave of 1998--2001, concentrated in a small number of very large deals. \citet{roll1986} explained such losses by managerial hubris, in which acquirers overestimate the synergies they can capture and overpay.
+
+The second approach, used in this paper, compares operating performance before and after the deal. \citet{healy1992} studied the 50 largest US mergers of 1979--1984 and found that merged firms' operating cash flow returns on assets improved relative to their industries, driven by better asset productivity rather than cost cuts. Later studies are less favourable. \citet{andrade2001} summarise the evidence as showing modest operating improvements at best. \citet{lubatkin1983} argued that the benefits of mergers are often offset by the costs of integrating two organisations, and \citet{epstein2005} identified strategic fit, deal structure and integration as the main determinants of merger success. \citet{gu2011} showed that acquirers with overpriced shares tend to overpay, and that the overpayment later appears as goodwill impairment.
+
+Studies of India, where M\&A activity grew after liberalisation, find mixed results. \citet{vanitha2007} compared the financial performance of Indian manufacturing companies before and after merger; \citet{mantravadi2008} found that effects differ by industry, with improvements in some sectors and declines in others; and \citet{pazarskis2006} found deterioration after mergers in Greece.
+
+Few of these studies cover the video-game industry, whose assets are largely intangible (intellectual property, studios and players) and whose revenues depend on a small number of hit titles. These features make acquisitions both attractive, as a way to buy proven franchises and players, and risky, because the purchased assets can lose value quickly.
+
+\section{Data and methods}\label{sec:methods}
+
+\subsection{Cases}
+
+Table~\ref{tab:deals} lists the four cases. They were chosen because each acquirer has publicly available historical financial statements and material exposure to the gaming ecosystem for which the deal was material, and for which at least three fiscal years of reported figures are available before and after completion. EA completed Codemasters on 18 February 2021, Glu Mobile in April 2021 and Playdemic on 20 September 2021. The June Playdemic date was its agreement date, not completion \citep{eacodemasters,eaplaydemic}. The three transactions are treated as an acquisition programme spanning FY2021 and FY2022, not a single fiscal-year event. Nazara was not listed during the 2019 acquisition period; its historical figures are used retrospectively. Unity is a game-engine and monetisation platform rather than a conventional publisher, and Sportskeeda is sports media, so these cases cover a heterogeneous gaming ecosystem. Nazara Technologies bought controlling stakes in Sportskeeda and Paper Boat Apps (Kiddopia) in 2019 and has continued acquiring since, most recently PokerBaazi's parent Moonshine Technology (\INR 9.82 billion for 47.7\%, 2024) and Curve Games (\INR 2.47 billion, 2025) \citep{bs2024nazara,bs2025nazara}.
+
+\begin{table}[h]
+\caption{The four acquisitions}\label{tab:deals}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}p{2.2cm}p{2.5cm}rp{3.8cm}l@{}}
+\toprule
+Acquirer & Target & Value & Payment & Completed \\
+\midrule
+Take-Two Interactive & Zynga & \USD 12.7 bn & \USD 3.50 cash plus 0.0406 Take-Two shares per Zynga share & May 2022 \\
+Electronic Arts & Codemasters, Glu Mobile, Playdemic & \USD 5.0 bn & Cash (\USD 1.2, 2.4 and 1.4 bn) & Feb--Sep 2021 \\
+Unity Software & ironSource & \USD 4.4 bn & All stock, 0.1089 Unity shares per ironSource share & Nov 2022 \\
+Nazara Technologies & Sportskeeda (67\%), Paper Boat Apps (51\%) & \INR 1.28 bn & Cash (\INR 0.44 and 0.84 bn) & 2019 \\
+\botrule
+\end{tabular}
+\par\vspace{4pt}{\footnotesize Sources: \citet{bwzynga}, \citet{eacodemasters}, \citet{eaplaydemic}, \citet{eaglu}, \citet{tc2022unity}, \citet{wikinazara}.}
+\end{table}
+
+\subsection{Data}
+
+Annual figures for Take-Two, Electronic Arts and Unity (revenue, operating income, net income, total assets, shareholders' equity, current assets and liabilities, operating cash flow, goodwill and goodwill impairment) were taken from their annual reports on Form 10-K through the XBRL data published by the US Securities and Exchange Commission \citep{secttwo,secea,secunity}, according to the repository documentation. The calculations here reproduce the supplied CSV; they are not a complete row-by-row reconciliation to the original filings. Selected figures and transaction dates were checked against primary sources. Taking the latest reported comparative figure can introduce restatement and reporting-perimeter changes, so a reproducible extraction must retain those details. Nazara's consolidated figures were taken from Screener.in \citep{screener}; its operating profit is reported before depreciation, interest and tax, and its current assets, current liabilities and goodwill are not available. All supplied figures are published with this paper. The reviewed snapshot is commit \texttt{8ba7b066ae3de88e58c29269ee6537f3d144604e}. It lacks a per-value record of filing accession, XBRL concept, duration/context, units, reporting basis and extraction rule. Consequently, arithmetic replication should be distinguished from complete source validation. Missing values remain unavailable rather than zero. For the impairment add-back only, the repository treats missing impairment entries as zero; those adjusted values must therefore be read subject to that assumption.
+
+\subsection{Measures and design}
+
+For each acquirer and fiscal year $t$, the following ratios are computed:
+\begin{align}
+\text{Operating margin}_t &= \frac{\text{Operating income}_t}{\text{Revenue}_t}, &
+\text{ROA}_t &= \frac{\text{Net income}_t}{\text{Total assets}_t}, \nonumber\\
+\text{ROE}_t &= \frac{\text{Net income}_t}{\text{Equity}_t}, &
+\text{OCF/A}_t &= \frac{\text{Operating cash flow}_t}{\text{Total assets}_t}, \nonumber\\
+\text{Current ratio}_t &= \frac{\text{Current assets}_t}{\text{Current liabilities}_t}, &
+\text{GW/A}_t &= \frac{\text{Goodwill}_t}{\text{Total assets}_t}. \label{eq:ratios}
+\end{align}
+Because goodwill impairments are non-cash charges that reflect a revaluation of past purchases rather than current operations, operating margin is also reported with the impairment added back. This OCF/A measure uses cash from operating activities in the statement of cash flows divided by year-end book assets. It is not a replication of \citet{healy1992}, whose design uses an operating cash-flow proxy, market-valued assets, combined acquirer--target pre-merger performance and industry adjustments. The present numerator reflects working-capital movements and the relevant accounting classification of taxes and interest. Impairment-adjusted operating margin is a narrow reconciliation, not a measure of organic profit or a full non-GAAP earnings adjustment. Impairments remain relevant to acquisition evaluation even though they are non-cash.
+
+For Take-Two, Unity and Nazara, year 0 is the fiscal year containing completion (FY2023, FY2022 and FY2020 respectively). That year is omitted to reduce partial-period consolidation and transaction-cost effects. This does not remove later integration costs. For continuity with the repository, the main EA table retains FY2019--21 versus FY2023--25 with FY2022 omitted; FY2021 already contains some Codemasters operations, so it is labelled a legacy baseline rather than wholly pre-acquisition. A separate EA comparison uses FY2018--20 and excludes both acquisition-programme years FY2021--22. For each measure $x$, the change is
+\begin{equation}
+\Delta x = \frac{1}{3}\sum_{t=1}^{3} x_{t} - \frac{1}{3}\sum_{t=-3}^{-1} x_{t}.\label{eq:change}
+\end{equation}
+Revenue expansion is summarised by an annualised ratio of window-average revenues:
+\begin{equation}
+g=\left(\overline{R}_{post}/\overline{R}_{pre}\right)^{1/(\overline{y}_{post}-\overline{y}_{pre})}-1.
+\end{equation}
+The midpoint-year gap is four years in the legacy comparisons and five in the clean EA sensitivity. This is not a conventional endpoint CAGR, a realised year-by-year growth rate, or an estimate of organic growth. Ratios are arithmetic averages of annual ratios, not ratios of pooled statement totals. ROA and ROE use year-end assets and equity, which are affected by acquisitions, impairments, financing and distributions. Nazara's EBITDA-style numerator is shown separately and cannot support a direct comparison of margin levels with US GAAP operating income.
+
+With four selected cases, population inference is inappropriate. For exact non-parametric tests on four non-zero paired differences, the smallest two-sided $p$-value attainable by a sign test or Wilcoxon signed-rank test on four observations is 0.125. The results are therefore presented as case evidence. Unlike \citet{healy1992}, the ratios are not adjusted for industry performance, so part of each change may reflect conditions common to the industry, notably the fall in games spending after the pandemic boom.
+
+\section{Results}\label{sec:results}
+
+\subsection{Revenue and profitability}
+
+Table~\ref{tab:results} reports the before-and-after averages. Later-window average revenue exceeds earlier-window revenue in all four cases. The annualised window-average revenue ratio ranges from 8.6\% for EA's legacy baseline to 42.1\% for Nazara. Acquired revenue contributes to consolidation, but the data do not separate it from organic growth, disposals, foreign exchange or other changes. Two of the three US companies have lower operating margins; Nazara's separately defined EBITDA-style margin also falls.
+
+\begin{table}[t]
+\caption{Financial performance in the three fiscal years before and after each deal}\label{tab:results}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lrrrrrrrr@{}}
+\toprule
+ & \multicolumn{2}{c}{Take-Two} & \multicolumn{2}{c}{Electronic Arts} & \multicolumn{2}{c}{Unity} & \multicolumn{2}{c}{Nazara} \\
+ & Before & After & Before & After & Before & After & Before & After \\
+\midrule
+Annualised revenue ratio & \multicolumn{2}{c}{+15.3\%} & \multicolumn{2}{c}{+8.6\%} & \multicolumn{2}{c}{+24.6\%} & \multicolumn{2}{c}{+42.1\%} \\
+Operating margin$^{a}$ & 15.3\% & $-48.9$\% & 21.6\% & 19.5\% & $-37.1$\% & $-35.2$\% & 23.1\% & 10.6\% \\
+\quad excluding goodwill impairment & 15.3\% & $-13.3$\% & 21.6\% & 19.5\% & $-37.1$\% & $-35.2$\% & 23.1\% & 10.6\% \\
+Net margin & 14.2\% & $-51.3$\% & 30.1\% & 14.2\% & $-38.2$\% & $-32.0$\% & 12.3\% & 5.6\% \\
+Return on assets & 8.1\% & $-27.5$\% & 15.0\% & 8.2\% & $-14.3$\% & $-9.0$\% & 8.2\% & 2.9\% \\
+Return on equity & 14.9\% & $-94.7$\% & 23.5\% & 15.2\% & $-25.8$\% & $-19.7$\% & 9.8\% & 4.2\% \\
+Cash flow / assets & 11.0\% & 2.0\% & 16.0\% & 15.2\% & $-3.5$\% & 4.7\% & 8.6\% & 3.9\% \\
+Current ratio & 1.81 & 0.98 & 2.57 & 1.18 & 2.89 & 2.32 & -- & -- \\
+Goodwill / assets & 9.0\% & 19.7\% & 19.9\% & 41.2\% & 24.3\% & 45.7\% & -- & -- \\
+\botrule
+\end{tabular}
+\par\vspace{4pt}{\footnotesize Averages of annual ratios in designated earlier/later windows: Take-Two FY2020--22 and FY2024--26; Electronic Arts FY2019--21 and FY2023--25; Unity FY2019--21 and FY2023--25; Nazara FY2017--19 and FY2021--23. Cash flow is operating cash flow. EA's earlier window includes partial Codemasters consolidation; see the clean-baseline sensitivity. $^{a}$Nazara's margin is before depreciation and is not comparable in definition to the US operating margins. Electronic Arts' net margin, ROA and ROE before the deals are raised by a one-off tax benefit in FY2020. Sources: \citet{secttwo,secea,secunity,screener}; author's calculations.}
+\end{table}
+
+
+
+\textbf{Take-Two and Zynga.} Revenue averaged \USD 5.88 billion after the deal against \USD 3.32 billion before, but the operating margin fell from 15.3\% to $-48.9\%$. Two forces drove the fall. First, acquired-intangible amortisation and other changes accompanied a reported operating loss of \USD 1.17 billion in FY2023. These company-level data do not isolate the contribution of amortisation or Zynga to that loss. Second, Take-Two wrote down \USD 2.34 billion of goodwill in FY2024 and \USD 3.55 billion in FY2025, \USD 5.89 billion in total, The company's FY2025 annual report attributes these charges to one reporting unit and cites lower forecast performance, industry conditions and strategy changes \citep{ttwo2025report}. This disclosure alone does not allocate the impairment uniquely to the Zynga transaction. With the impairments added back, the operating margin still fell by 28.6 points, and operating cash flow, which had averaged 11.0\% of assets, was close to zero from FY2023 to FY2025 before recovering to \USD 624 million in FY2026. Goodwill, which had been 9--10\% of assets, jumped to 43\% after the deal and fell back to 11\% after the write-downs.
+
+\textbf{Electronic Arts.} Later-window average revenue was higher, with an annualised window-average ratio of 8.6\%, while the operating margin slipped from 21.6\% to 19.5\% and the operating cash flow return was almost unchanged. This operating-margin change is smaller than Take-Two's, but does not establish a neutral investment return. The fall in net margin and ROA overstates the deterioration, because EA's pre-deal net income includes a one-off tax benefit in FY2020. Cash acquisitions occurred alongside a decline in the current ratio, from 2.57 to 1.18, and goodwill doubled from about a fifth to over 40\% of assets, where it has stayed at about \USD 5.4 billion.
+
+\textbf{Unity and ironSource.} Unity was loss-making before and after the merger. Reported revenue rose 57\% in 2023 and operating cash flow became positive after the merger, from $-3.5\%$ to 4.7\% of assets, but operating losses narrowed only from 37.1\% to 35.2\% of revenue. Revenue then fell 17\% in 2024. Goodwill rose to about 46\% of assets and has been unchanged since 2023.
+
+\textbf{Nazara.} Revenue quadrupled, from an average of \INR 1.77 billion to \INR 7.22 billion, after the 2019 acquisitions and those that followed. The margin before depreciation fell from 23.1\% to 10.6\%, and returns on assets and equity roughly halved. Nazara has continued to acquire, and in FY2026 its operating result before depreciation turned negative for the first time since FY2020.
+
+\subsection{Balance sheets and market reaction}
+
+The balance-sheet ratios show substantial increases in recorded goodwill around the US acquisitions. Goodwill rose to 40--46\% of total assets at Electronic Arts and Unity and to 43\% at Take-Two, Goodwill is the residual after allocating acquisition consideration to identifiable net assets under purchase accounting; it is not interchangeable with a stock-price takeover premium. Impairment reduces its carrying value and the book-asset denominator, affecting both goodwill/assets and accounting return ratios.
+
+
+
+Reported announcement-day share-price changes provide context, but are not market-adjusted abnormal returns and do not test whether investors anticipated the later accounting outcomes. Take-Two's shares fell 13.1\% on the day the Zynga deal was announced, their largest one-day fall since 2009, while Zynga's rose 40.7\% on a 64\% premium \citep{vgc2022}. Unity's shares fell about 13\% on the day it announced the ironSource merger \citep{cnbc2022unity}, although the same announcement cut its revenue guidance, so the fall cannot be attributed to the merger alone.
+
+\subsection{Sensitivity to window selection}
+
+EA's original FY2019--21 baseline includes Codemasters from February 2021. Using FY2018--20 instead produces an operating margin of 24.7\%, compared with 19.5\% in FY2023--25: a decline of 5.2 percentage points rather than 2.1. The annualised revenue ratio becomes 7.5\%, with a five-year midpoint gap. These results preserve the direction of change but weaken the characterisation of EA as close to neutral. This alternative is a timing sensitivity, not a correction for all confounders. EA FY2018 operating cash flow is missing from the CSV, so a complete three-year OCF/A sensitivity cannot be calculated without retrieving that filing value.
+
+Take-Two's later-window OCF/A average includes FY2026's recovery. A separate, overlapping FY2023--25 diagnostic includes the completion year and yields OCF/A of $-0.2\%$ and an impairment-adjusted operating margin of $-20.0\%$, compared with 2.0\% and $-13.3\%$ in FY2024--26. This is not the same event-year-exclusion design. It shows that the size of the deterioration is sensitive to the observation period, although its direction persists.
+
+\section{Discussion}\label{sec:discussion}
+
+The cases document revenue expansion alongside mixed profitability and cash generation. They do not establish that acquisitions caused the observed changes. Reported performance also reflects product releases, working capital, financing, restructuring, accounting allocations and other acquisitions. Without a counterfactual, deterioration after a deal may coexist with performance that would have been worse without it, while improvement may occur despite an unsuccessful acquisition.
+
+Several measurement distinctions matter. Acquirer-only baseline figures are compared with a larger consolidated perimeter after completion. Revenue growth is therefore partly mechanical. Purchase accounting raises identifiable intangible assets and goodwill, while amortisation and impairment lower accounting earnings. Subsequent impairment also reduces book assets and equity, making returns based on year-end balances sensitive to accounting changes. Take-Two's very negative ROE is particularly influenced by a shrinking equity denominator; it is not a direct estimate of the shareholder return on the acquisition.
+
+The impairment add-back separates a particular non-cash charge from reported operating income. It does not remove acquired-intangible amortisation, restructuring, share-based compensation or other costs, and it cannot be interpreted as profit that the company would have earned without the acquisition. Nor does adding back an impairment make the economic information in the write-down irrelevant.
+
+The announcement-day declines cited above are contemporaneous price observations. An event study would require a benchmark, an estimation period, a specified event window, reliable return data and consideration of simultaneous disclosures. Unity's guidance revision is an explicit confounder. Two price declines cannot validate a general claim that the market predicted acquisition failure.
+
+Case selection is purposive and covers different businesses, geographies and accounting regimes. Nazara's margin has a different numerator, its historical figures come from a secondary source, and subsequent acquisitions overlap its later window. EA's net-income measures are distorted by its FY2020 tax benefit; changing the baseline does not remove that benefit. These restrictions preclude ranking deal quality from the ratios or estimating an industry-wide acquisition effect.
+
+A stronger follow-up would archive filing-level inputs and extraction code; construct combined acquirer--target pre-deal measures where available; distinguish organic and acquired revenue; and compare changes with firms matched on size, business model and pre-deal performance. It should also assess parallel pre-trends, use comparable accounting definitions and average-balance return measures, report sensitivity to exceptional items and windows, and analyse announcement returns separately. None of those additional estimates is claimed here.
+
+\section{Conclusion}\label{sec:conclusion}
+
+In the supplied data, all four companies have higher average revenue in the designated later windows. Take-Two and EA have lower operating margins, Unity remains loss-making with narrower operating losses and stronger OCF/A, and Nazara has a lower EBITDA-style margin. Take-Two's large goodwill impairments materially affect its reported losses. The clean EA baseline confirms the direction of its margin decline but changes the magnitude. These findings distinguish business expansion from accounting profitability and cash generation. They remain descriptive evidence about four companies and do not identify the causal impact, investment return or general success rate of gaming-industry acquisitions.
+
+
+
+\section*{Declarations}
+
+\begin{itemize}
+\item \textbf{Funding:} No funding was received for this study.
+\item \textbf{Competing interests:} The author has no competing interests to declare.
+\item \textbf{Ethics approval and consent to participate:} Not applicable; the study uses only published company data.
+\item \textbf{Data availability:} All financial data and deal details used in this study are available at \url{https://github.com/harsh-github007/Gaming-MA-Financial-Performance}.
+\item \textbf{Code availability:} The original analysis script and figures are available in the same repository; the revision includes an independent arithmetic audit, and the results can be explored at \url{https://harsh-github007.github.io/Gaming-MA-Financial-Performance/}.
+\item \textbf{Author contributions:} The original manuscript credits Harsh Raj with study design, data collection, analysis and writing. This revised draft includes computational verification, methodological clarification and editorial assistance; the author should review and approve the final text and declarations before submission.
+\end{itemize}
+
+\begin{thebibliography}{99}
+\bibitem[Healy et al.(1992)]{healy1992} Healy, P. M., Palepu, K. G. and Ruback, R. S. (1992). Does corporate performance improve after mergers? \emph{Journal of Financial Economics}, 31(2), 135--175.
+\bibitem[Andrade et al.(2001)]{andrade2001} Andrade, G., Mitchell, M. and Stafford, E. (2001). New evidence and perspectives on mergers. \emph{Journal of Economic Perspectives}, 15(2), 103--120.
+\bibitem[Moeller et al.(2005)]{moeller2005} Moeller, S. B., Schlingemann, F. P. and Stulz, R. M. (2005). Wealth destruction on a massive scale? \emph{Journal of Finance}, 60(2), 757--782.
+\bibitem[Roll(1986)]{roll1986} Roll, R. (1986). The hubris hypothesis of corporate takeovers. \emph{Journal of Business}, 59(2), 197--216.
+\bibitem[Lubatkin(1983)]{lubatkin1983} Lubatkin, M. (1983). Mergers and the performance of the acquiring firm. \emph{Academy of Management Review}, 8(2), 218--225.
+\bibitem[Epstein(2005)]{epstein2005} Epstein, M. J. (2005). The determinants and evaluation of merger success. \emph{Business Horizons}, 48(1), 37--46.
+\bibitem[Gu and Lev(2011)]{gu2011} Gu, F. and Lev, B. (2011). Overpriced shares, ill-advised acquisitions, and goodwill impairment. \emph{The Accounting Review}, 86(6), 1995--2022.
+\bibitem[Vanitha and Selvam(2007)]{vanitha2007} Vanitha, S. and Selvam, M. (2007). Financial performance of Indian manufacturing companies during pre and post merger. \emph{International Research Journal of Finance and Economics}, 12, 7--35.
+\bibitem[Mantravadi and Reddy(2008)]{mantravadi2008} Mantravadi, P. and Reddy, A. V. (2008). Post-merger performance of acquiring firms from different industries in India. \emph{International Research Journal of Finance and Economics}, 22, 191--204.
+\bibitem[Pazarskis et al.(2006)]{pazarskis2006} Pazarskis, M. et al. (2006). Exploring the improvement of corporate performance after mergers: the case of Greece. \emph{International Research Journal of Finance and Economics}, 6, 184--192.
+\bibitem[SEC(Take-Two)]{secttwo} SEC. Take-Two company filings; source described by original repository. \url{https://www.sec.gov/edgar/browse/?CIK=946581}
+\bibitem[SEC(EA)]{secea} SEC. Electronic Arts company filings; source described by original repository. \url{https://www.sec.gov/edgar/browse/?CIK=712515}
+\bibitem[SEC(Unity)]{secunity} SEC. Unity company filings; source described by original repository. \url{https://www.sec.gov/edgar/browse/?CIK=1810806}
+\bibitem[Screener(2026)]{screener} Screener.in. Nazara consolidated statements; secondary source named in the original repository. \url{https://www.screener.in/company/NAZARA/consolidated/}
+\bibitem[Take-Two(2022)]{bwzynga} Take-Two. Completes combination with Zynga, 23 May 2022. \url{https://www.businesswire.com/news/home/20220523005631/en/}
+\bibitem[EA(2021a)]{eacodemasters} EA. Acquisition of Codemasters completed, 18 February 2021. \url{https://news.ea.com/press-releases/press-releases-details/2021/Electronic-Arts-and-Codemasters-Establish-a-New-Global-Powerhouse-for-Racing-Videogames--Entertainment/default.aspx}
+\bibitem[SEC(2021)]{eaplaydemic} Electronic Arts. Form 8-K, completion of Playdemic acquisition, 20 September 2021. \url{https://www.sec.gov/Archives/edgar/data/712515/000071251521000138/ea-20210920.htm}
+\bibitem[EA(2021b)]{eaglu} EA. Completes acquisition of Glu Mobile. \url{https://ir.ea.com/press-releases/press-release-details/2021/Electronic-Arts-Completes-Acquisition-of-Glu-Mobile-Creating-a-New-Global-Leader-in-Mobile-Gaming/default.aspx}
+\bibitem[Take-Two(2025)]{ttwo2025report} Take-Two. FY2025 annual report, goodwill disclosure. \url{https://ir.take2games.com/static-files/1e8d3004-75ab-48d7-b705-7b44fe45694e}
+\bibitem[TechCrunch(2022)]{tc2022unity} TechCrunch. Unity and ironSource's merger is complete, 7 November 2022. \url{https://techcrunch.com/2022/11/07/unity-and-ironsources-4-4b-merger-is-now-complete/}
+\bibitem[Wikipedia(Nazara)]{wikinazara} Wikipedia. Nazara Technologies. Secondary transaction reference retained from original manuscript. \url{https://en.wikipedia.org/wiki/Nazara_Technologies}
+\bibitem[Business Standard(2024)]{bs2024nazara} Business Standard. Nazara to acquire PokerBaazi parent Moonshine Technology. \url{https://www.business-standard.com/companies/news/nazara-to-acquire-pokerbaazi-parent-moonshine-technology-for-rs-982-cr-124091300696_1.html}
+\bibitem[Business Standard(2025)]{bs2025nazara} Business Standard. Nazara acquires Curve Games. \url{https://www.business-standard.com/companies/news/nazara-acquires-curve-games-for-rs-247-cr-continues-manda-spree-125052001678_1.html}
+\bibitem[VGC(2022)]{vgc2022} Video Games Chronicle. Take-Two shares decline following Zynga announcement. Price observation as cited in original manuscript, not an independently estimated abnormal return. \url{https://www.videogameschronicle.com/news/take-two-shares-suffer-major-decline-following-zynga-deal-announcement/}
+\bibitem[CNBC(2022)]{cnbc2022unity} CNBC. Unity stock declines on guidance revision and merger announcement, 13 July 2022. \url{https://www.cnbc.com/2022/07/13/unity-stock-down-on-lowered-2022-guidance-merger-with-ironsource.html}
+\end{thebibliography}
+
+\end{document}
+

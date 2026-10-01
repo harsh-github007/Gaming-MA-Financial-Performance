@@ -1,79 +1,27 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Gaming M&amp;A Performance">
-  <meta property="og:description" content="Did acquisitions pay off for video-game companies? Take-Two–Zynga, EA's 2021 deals, Unity–ironSource and Nazara, before and after, from reported financials.">
-  <meta property="og:url" content="https://harsh-github007.github.io/Gaming-MA-Financial-Performance/">
-  <meta property="og:image" content="https://harsh-github007.github.io/Gaming-MA-Financial-Performance/assets/og.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta name="twitter:card" content="summary_large_image">
-  <title>Gaming M&amp;A Performance</title>
-  <meta name="description" content="Did acquisitions pay off for video-game companies? Take-Two–Zynga, EA's 2021 deals, Unity–ironSource and Nazara, before and after, from reported financials.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-  <meta name="theme-color" content="#0b0b0c">
-  <link rel="stylesheet" href="assets/style.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23ff4400'/><path d='M9 13h14a4 4 0 0 1 4 4v1a4 4 0 0 1-7 2.6L19 20h-6l-1 .6A4 4 0 0 1 5 18v-1a4 4 0 0 1 4-4z' fill='white'/></svg>">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gaming M&amp;A Performance | Harsh Raj</title>
+<meta name="description" content="A financial research project by Harsh Raj. Explore reported performance around four gaming-industry acquisitions.">
+<meta property="og:type" content="website"><meta property="og:title" content="Gaming M&amp;A Performance"><meta property="og:description" content="Explore financial performance around four gaming-industry acquisitions."><meta property="og:url" content="https://harsh-github007.github.io/Gaming-MA-Financial-Performance/"><meta property="og:image" content="https://harsh-github007.github.io/Gaming-MA-Financial-Performance/assets/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#101112"><link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23ff4400'/><path d='M9 13h14a4 4 0 0 1 4 4v1a4 4 0 0 1-7 2.6L19 20h-6l-1 .6A4 4 0 0 1 5 18v-1a4 4 0 0 1 4-4z' fill='white'/></svg>">
 </head>
 <body>
-  <header class="top">
-    <div class="wrap">
-      <span class="label">[ Gaming M&amp;A · 4 deals ]</span>
-      <h1>Did the deals<br><em>pay off?</em></h1>
-      <p class="lede">How four video-game companies performed in the three years before and after a major acquisition, from their own reported financials: Take-Two and Zynga, Electronic Arts' 2021 buying spree, Unity and ironSource, and India's Nazara Technologies.</p>
-    </div>
-  </header>
-
-  <main class="wrap">
-    <p class="result" id="loadError" hidden></p>
-
-    <section class="panel" aria-labelledby="dealsHead">
-      <h2 id="dealsHead">The deals</h2>
-      <div class="deals" id="deals"></div>
-    </section>
-
-    <section class="panel" aria-labelledby="chartHead">
-      <h2 id="chartHead">Before and after</h2>
-      <div class="chips" role="group" aria-label="Acquirer" id="dealChips"></div>
-      <div class="inputs">
-        <label>Measure<select id="metric"></select></label>
-      </div>
-      <div class="chart"><canvas id="lineChart" aria-label="Chosen measure by fiscal year"></canvas></div>
-      <p class="muted small">The grey band is the fiscal year the deal completed. That year is left out of the before-and-after averages, because it mixes both.</p>
-      <p class="muted small" id="ppYears"></p>
-      <div class="scroll"><table class="tbl" id="ppTable"></table></div>
-      <p class="result" id="ppNote"></p>
-    </section>
-
-    <section class="panel" aria-labelledby="sumHead">
-      <h2 id="sumHead">All four at a glance</h2>
-      <p class="muted small">Change from the three years before to the three years after each deal, in percentage points.</p>
-      <div class="scroll"><table class="tbl" id="sumTable"></table></div>
-      <p class="muted small">Four deals are case evidence, not a sample: no statistical test on four firms can show a significant average effect.</p>
-    </section>
-
-    <section class="panel" aria-labelledby="gwHead">
-      <h2 id="gwHead">What the deals left on the balance sheet</h2>
-      <p class="muted small">Goodwill is the part of a purchase price above the value of the assets bought. If the acquisition disappoints, it is written down. Take-Two wrote down $2.3 billion in FY2024 and $3.5 billion in FY2025, mostly tied to Zynga.</p>
-      <div class="chart"><canvas id="gwChart" aria-label="Goodwill as a share of total assets"></canvas></div>
-    </section>
-
-    <section class="panel small muted">
-      Sources: annual figures for Take-Two, Electronic Arts and Unity from their 10-K filings (SEC XBRL data); Nazara Technologies' consolidated figures from Screener.in; deal terms and share-price reactions from company announcements and press reports. Full list in the <a href="https://github.com/harsh-github007/Gaming-MA-Financial-Performance/blob/main/research/gaming-ma-financial-performance.pdf">research paper</a>. For information only, not investment advice.
-    </section>
-  </main>
-
-  <footer class="wrap foot">
-    <span>Data to fiscal 2026.</span>
-    <a href="https://github.com/harsh-github007/Gaming-MA-Financial-Performance">Source, data and research on GitHub</a>
-  </footer>
-
-  <script src="assets/vendor/chart.umd.js"></script>
-  <script type="module" src="assets/app.js"></script>
-</body>
-</html>
+<a class="skip" href="#explore">Skip to the data</a>
+<header class="site-header wrap"><a class="wordmark" href="#top" aria-label="Gaming M&A home">Gaming <span>M&amp;A</span></a><nav aria-label="Main navigation"><a href="#explore">Explore</a><a href="#compare">Compare</a><a href="#methods">Method</a></nav><a class="text-link source-link" href="https://github.com/harsh-github007/Gaming-MA-Financial-Performance">Source &amp; paper</a></header>
+<main id="top">
+<section class="hero wrap" aria-labelledby="heroHead"><div class="hero-copy"><h1 id="heroHead">Did the deals<br><em>pay off?</em></h1><p>Four gaming companies. Bigger revenues. A more complicated picture of profitability.</p><a class="button primary" href="#explore">Explore the research</a><p class="author">A financial research project by Harsh Raj.</p></div><div class="hero-evidence"><h2>Growth is only half the story.</h2><p class="muted">Average margins before and after acquisition.</p><div class="legend"><span><i class="dot before"></i>Before</span><span><i class="dot after"></i>After</span><span class="unit">Margin, %</span></div><div id="heroPlot" class="hero-plot skeleton" aria-busy="true"><span class="loading-copy">Loading company comparisons</span></div><p class="caption">Nazara uses a margin before depreciation. EA's original baseline includes some Codemasters operations.</p></div></section>
+<div class="wrap">
+<div class="load-error" id="loadError" role="alert" hidden><h2>We couldn't load the data.</h2><p id="errorMessage"></p><button class="button" id="retry">Try again</button></div>
+<p class="research-note">A descriptive study of four companies. These comparisons show changes around acquisitions, not their causal effects.</p>
+<section class="explorer section" id="explore" aria-labelledby="chartHead" aria-busy="true"><h2 id="chartHead">Before and after</h2><p class="section-intro">Pick an acquirer. Follow the numbers across the deal.</p><div class="explorer-layout"><aside class="case-sidebar"><div class="chips" role="group" aria-label="Acquirer" id="dealChips"></div><div class="case-context" id="caseContext"><div class="skeleton context-skeleton"></div></div><details class="deal-detail"><summary>Transaction details</summary><div id="dealDetails"></div></details></aside><div class="chart-workspace"><div class="chart-toolbar"><label for="metric">Measure<select id="metric" disabled><option>Loading measures</option></select></label><button class="button quiet" id="export" disabled>Download CSV</button></div><div id="selectedStats" class="selected-stats" aria-live="polite"></div><div class="chart"><canvas id="lineChart" role="img" aria-label="Chosen measure by fiscal year"></canvas><div id="chartFallback" hidden></div></div><p class="caption" id="bandNote">The shaded band marks the completion fiscal year.</p><p class="caption" id="ppYears"></p><div class="interpretation"><h3>What to take from this</h3><p id="ppNote"></p></div><details class="data-detail"><summary>View all before-and-after measures</summary><div class="scroll" tabindex="0" role="region" aria-label="Before-and-after data"><table class="tbl" id="ppTable"></table></div></details><details class="data-detail"><summary>View annual data for this measure</summary><div class="scroll" tabindex="0" role="region" aria-label="Annual data"><table class="tbl" id="annualTable"></table></div></details></div></div></section>
+<section class="section comparison" id="compare" aria-labelledby="sumHead"><h2 id="sumHead">All four at a glance</h2><p class="section-intro">Revenue expanded in every case. The other measures tell different stories.</p><div class="scroll" tabindex="0" role="region" aria-label="Comparison across companies"><table class="tbl overview" id="sumTable"></table></div><p class="caption">Margin, returns and cash flow changes are in percentage points. Revenue is the annualised ratio of window averages, not organic growth. Nazara's margin uses a different definition.</p></section>
+<section class="section goodwill-section" id="balance-sheet" aria-labelledby="gwHead"><div class="goodwill-copy"><h2 id="gwHead">What the deals left on the balance sheet</h2><p>Goodwill grew as a share of the US companies' assets. Take-Two later recorded $5.9 billion of goodwill impairments across FY2024 and FY2025.</p><p class="muted">Goodwill is the residual after a purchase price is allocated to identifiable net assets. An impairment lowers its carrying value; it does not uniquely measure a deal's success or failure.</p></div><div class="goodwill-visual"><div class="legend" id="gwLegend"></div><div class="chart small-chart"><canvas id="gwChart" role="img" aria-label="Goodwill as a share of total assets for the three US companies"></canvas><p class="caption" id="gwFallback" hidden>The chart is unavailable. The figures are available in the table below.</p></div><details class="data-detail"><summary>View goodwill data</summary><div class="scroll" tabindex="0" role="region" aria-label="Goodwill data"><table class="tbl" id="gwTable"></table></div></details></div></section>
+<section class="section methods" id="methods" aria-labelledby="methodsHead"><h2 id="methodsHead">Read the evidence with context.</h2><div class="methods-grid"><div><h3>A consistent window, with a caveat</h3><p>Three-year averages exclude the completion fiscal year for Take-Two, Unity and Nazara. EA's programme spans FY2021 and FY2022; its original FY2019 to FY2021 baseline includes partial Codemasters consolidation.</p><p>Using an entirely pre-programme EA baseline changes its operating-margin decline from 2.1 to 5.2 percentage points.</p></div><div><h3>Comparable numbers need comparable definitions</h3><p>US company operating margins use operating income. Nazara's measure is before depreciation. Returns use year-end assets and equity; impairments and financing can change those denominators.</p></div><div><h3>Sources you can inspect</h3><p>US financials are supplied from 10-K filings via SEC XBRL. Nazara's consolidated figures come from Screener.in. The calculations reproduce the supplied CSV; a full filing-level reconciliation remains outstanding.</p><a class="text-link" href="https://github.com/harsh-github007/Gaming-MA-Financial-Performance/blob/paper-review-corrections/research/revised-paper.tex">Read the revised manuscript</a></div></div><p class="caption">For information only, not investment advice.</p></section>
+</div></main>
+<footer class="wrap foot"><span>Research by Harsh Raj</span><span>Company data through FY2026 where available.</span><a href="https://github.com/harsh-github007/Gaming-MA-Financial-Performance/tree/main/data">Inspect the data</a></footer>
+<noscript><p class="wrap">Enable JavaScript to explore the charts, or <a href="https://github.com/harsh-github007/Gaming-MA-Financial-Performance/tree/main/data">view the CSV files on GitHub</a>.</p></noscript>
+<script src="assets/vendor/chart.umd.js"></script><script type="module" src="assets/app.js"></script>
+</body></html>

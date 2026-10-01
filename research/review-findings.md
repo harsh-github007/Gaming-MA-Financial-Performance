@@ -28,7 +28,7 @@ The independent standard-library audit recomputes all 108 stored pre/post fields
 
 Primary-source spot checks support the corrected EA dates, Take-Two impairment totals, Take-Two FY2026 revenue and operating loss, and Unity FY2023–25 revenue and operating losses. The latter can be checked in [Unity's FY2025 10-K](https://www.sec.gov/Archives/edgar/data/1810806/000181080626000011/unity-20251231.htm) and [Take-Two's FY2026 release](https://www.take2games.com/ir/news/take-two-interactive-software-inc-reports-results-fourth-2). These checks do not substitute for a full filing reconciliation.
 
-The original full analysis script could not run here because matplotlib is unavailable. Its core calculations were independently reproduced without third-party packages. No packages were installed. The original dashboard was not reviewed visually or modified.
+The original full analysis script could not run here because matplotlib is unavailable. Its core calculations were independently reproduced without third-party packages. No packages were installed. This report covers the initial paper review. A later frontend refinement is documented in DESIGN.md and includes browser checks and export tests.
 
 ## Deliverables and remaining limits
 

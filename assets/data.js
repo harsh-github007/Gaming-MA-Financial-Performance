@@ -22,4 +22,3 @@ export async function loadAll(base = '.') {
   })));
 }
 export const span = s => { const [a, b] = String(s).split('-').map(Number); return [a, b]; };
-

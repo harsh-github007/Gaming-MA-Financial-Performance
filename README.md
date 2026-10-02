@@ -3,14 +3,14 @@
 Did acquisitions pay off for video-game companies? This project compares four acquirers' financial performance in the three fiscal years before and after a major deal, using their own reported financial statements.
 
 **Dashboard:** https://harsh-github007.github.io/Gaming-MA-Financial-Performance/
-**Revised paper:** [Revised descriptive case-study manuscript](research/revised-paper.tex), with [review findings](research/review-findings.md) and [verified calculations](analysis/verified-calculations.json). The revision corrects timing and interpretation and adds sensitivity checks. The PDF below is the original manuscript and has not been regenerated.
+**Revised paper:** [Revised descriptive case-study manuscript](research/revised-paper.tex), with [corrections in v2](research/corrections-v2.md) and [verified calculations](analysis/verified-calculations.json). The revision corrects timing and interpretation and adds sensitivity checks. The PDF below is the original manuscript and has not been regenerated.
 
 **Original research paper:** [A Case Study of the Impact of Mergers and Acquisitions on the Financial Performance of Companies in the Gaming Industry](research/gaming-ma-financial-performance.pdf), written in the Springer Nature journal article format ([LaTeX source](research/gaming-ma-financial-performance.tex))
 
 
 ![Gaming acquisition research workspace](assets/screenshot.png)
 
-The interface uses warm paper surfaces, rust accents, and a dedicated chart workspace. Choose an acquirer and measure to compare before-and-after results, inspect annual data, or export CSV. Responsive layouts keep the research readable on phones while preserving the existing chart transitions and reduced-motion support.
+The interface uses warm neutral surfaces, green accents, and a dedicated chart workspace. Choose an acquirer and measure to compare before-and-after results, inspect annual data, or export CSV. Responsive layouts keep the research readable on phones while preserving the existing chart transitions and reduced-motion support.
 
 ## The deals
 

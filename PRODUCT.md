@@ -15,7 +15,7 @@ Present an original financial research project and let visitors inspect reported
 Static HTML, CSS and JavaScript deployed through GitHub Pages. Chart.js is bundled locally. Financial data remain in shared CSV files. Preserve company selection, metric selection, before/after tables and goodwill comparisons. The evidence is descriptive, not causal.
 
 ## Brand Commitments
-Keep the incumbent dark surface, orange accent, Inter typography, direct research-question headline and existing favicon. The current task requests a more fluid and creative refinement rather than a new brand.
+Warm neutral surfaces, green actions, Inter typography and evidence-led copy. This update unifies the portfolio palette while preserving research controls.
 
 ## Evidence on Hand
 Four company cases, financial inputs, generated ratios, an analysis script and revised manuscript. No testimonials, employment outcomes or investment-return estimates are supplied.
